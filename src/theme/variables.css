@@ -1,2 +1,37 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+/* --- src/theme/variables.css --- */
+:root {
+  /* Warna Background Utama (Gelap Angkasa) */
+  --ion-background-color: #0d0d12;
+  --ion-text-color: #ffffff;
+
+  /* Warna Aksen Primary (Cyan Neon) */
+  --ion-color-primary: #00d2ff;
+  --ion-color-primary-rgb: 0,210,255;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-shade: #00b9e0;
+  --ion-color-primary-tint: #1ad7ff;
+
+  /* Warna Aksen Tertiary (Biru Gelap) */
+  --ion-color-tertiary: #3a7bd5;
+  --ion-color-tertiary-rgb: 58,123,213;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-shade: #336cbb;
+  --ion-color-tertiary-tint: #4e88d9;
+
+  /* Tab Bar Bawah */
+  --ion-tab-bar-background: rgba(18, 18, 18, 0.85);
+  --ion-tab-bar-border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Memaksa aplikasi selalu dalam mode gelap (Dark Mode Force) */
+@media (prefers-color-scheme: light) {
+  body {
+    --ion-background-color: #0d0d12;
+    --ion-text-color: #ffffff;
+  }
+}
+
+/* Kustomisasi Font agar lebih modern */
+* {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}

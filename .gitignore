@@ -29,3 +29,15 @@ yarn-error.log*
 
 # Optional eslint cache
 .eslintcache
+
+# --- ATMOSFERA SECRETS (DO NOT UPLOAD) ---
+# Environment variables (API Keys Supabase, RAWG, dll)
+.env
+.env.*
+
+# Android Keystore/Tanda Tangan Play Store
+*.jks
+*.keystore
+*.p12
+*.key
+atmosfera-key.jks

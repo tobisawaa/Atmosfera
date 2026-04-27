@@ -1,0 +1,133 @@
+/* --- src/pages/Home.css --- */
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); border-radius: 10px; }
+::-webkit-scrollbar-thumb { background: rgba(0, 210, 255, 0.2); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 210, 255, 0.5); }
+
+/* BACKGROUND BERNAPAS */
+.animated-bg {
+  background: linear-gradient(-45deg, #0d0d12, #161625, #0d0d12, #0f1c2e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ORNAMEN CYBER GRID UNTUK BACKGROUND */
+.cyber-grid-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* GLASSMORPHISM CARD */
+ion-card {
+  background: rgba(30, 30, 38, 0.6) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease !important;
+  animation: fadeInUp 0.5s ease-out backwards;
+  z-index: 1;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 210, 255, 0.2) !important;
+  border: 1px solid rgba(0, 210, 255, 0.4) !important;
+}
+
+/* ANIMASI TEKS SUHU */
+.temp-text {
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5, #00d2ff);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+  font-weight: 900;
+}
+@keyframes shine { to { background-position: 200% center; } }
+
+/* EFEK LOADING TERMINAL / RPG BOX */
+.rpg-dialog-box {
+  background: rgba(10, 10, 15, 0.85);
+  border: 2px solid #00d2ff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.2), inset 0 0 10px rgba(0, 210, 255, 0.1);
+  font-family: 'Courier New', Courier, monospace;
+  color: #00d2ff;
+  text-align: left;
+  position: relative;
+  max-width: 320px;
+  margin: 30px auto;
+  z-index: 2;
+}
+.rpg-dialog-box::after {
+  content: '▼';
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  animation: blink 1s infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* GENRE TAGS / BADGES */
+.genre-badge {
+  --background: rgba(0, 210, 255, 0.1);
+  color: #00d2ff;
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  font-weight: normal;
+  padding: 5px 8px;
+  margin-right: 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+ion-tab-bar {
+  --background: rgba(13, 13, 18, 0.8) !important;
+  backdrop-filter: blur(15px);
+}
+/* Custom Alert Delete Styling */
+.cyber-alert-box {
+  --background: rgba(20, 20, 30, 0.95);
+  --backdrop-opacity: 0.6;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+.cyber-alert-box .alert-title {
+  color: #fff;
+  font-weight: bold;
+}
+.cyber-alert-box .alert-sub-title {
+  color: #00d2ff;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+.cyber-alert-box .alert-message {
+  color: #aaa;
+}
+.alert-button-cancel {
+  color: #888 !important;
+}
+.alert-button-confirm {
+  color: #ff4d4d !important;
+  font-weight: bold !important;
+}
