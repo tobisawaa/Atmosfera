@@ -33,27 +33,22 @@ If you want to clone and run this project on your local machine, follow these st
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/tobisawaa/Atmosfera.git
+   git clone [https://github.com/tobisawa/atmosfera.git](https://github.com/YOUR_USERNAME/atmosfera.git)
    cd atmosfera
 Install dependencies:
+    npm install
 
-Bash
-npm install
 Set up Environment Variables:
 Create a .env file in the root directory and add your API keys:
-
-Code snippet
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 VITE_RAWG_API_KEY=your_rawg_api_key
+
 Run on Web Browser:
-
-Bash
 npm run dev
-📱 Building for Android
-To compile the app into a native Android .apk:
 
-Bash
+Building for Android
+To compile the app into a native Android .apk:
 # 1. Build the React project
 npm run build
 
@@ -62,5 +57,6 @@ npx cap sync android
 
 # 3. Open Android Studio to build the APK
 npx cap open android
+
 📜 Privacy Policy
-Atmosfera respects user privacy, particularly regarding Geolocation data. [Read our full Privacy Policy here](https://peridot-quokka-f8e.notion.site/Atmosfera-Privacy-Policy-34fcefef99d480e4aae7c4aba11ad075)
+Atmosfera respects user privacy, particularly regarding Geolocation data.[Read our full Privacy Policy here](https://peridot-quokka-f8e.notion.site/Atmosfera-Privacy-Policy-34fcefef99d480e4aae7c4aba11ad075)
